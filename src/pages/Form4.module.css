@@ -1,0 +1,32 @@
+.top__alert {
+  font-size: 14px;
+  background: #d9e3fa;
+  padding: 9px;
+  color: #176ede;
+  border-radius: 5px;
+  border: 1px solid #bfd7f5;
+  font-family: Inter, sans-serif !important;
+  padding: 10px;
+  margin-bottom: 15px !important;
+  position: relative;
+}
+
+.coupon_btn {
+  background: #206bb1;
+}
+.coupon_btn:hover {
+  background: #3e91de;
+}
+.couponLabel {
+  font-size: 0.8rem;
+}
+.paymentMethod__font {
+  font-size: 13px;
+}
+
+.payout__font {
+  font-size: 13px;
+  /* font-weight: 500; */
+  font-style: bold;
+  color: #444;
+}
