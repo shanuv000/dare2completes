@@ -1,5 +1,8 @@
 import "./App.css";
 import Form from "./pages/Form";
+import Form2 from "./pages/Form2";
+import Form3 from "./pages/Form3";
+import Form4 from "./pages/Form4";
 import Slider1 from "./components/Slider1";
 import { FireProvider } from "./components/FormContext";
 import { Switch, Route } from "react-router-dom";
@@ -12,14 +15,17 @@ function App() {
   return (
     <div className="app">
       <FireProvider>
-        <Drawer2 />
         <Switch>
-          {/* <Route path="/drawer" component={Drawers} /> */}
-
           <Route path="/" exact component={Slider1} />
+
+          <Drawer2>
+            <Route path="/form" exact component={Form} />
+            <Route path="/form2" exact component={Form2} />
+            <Route path="/form3" exact component={Form3} />
+            <Route path="/form4" exact component={Form4} />
+          </Drawer2>
         </Switch>
       </FireProvider>
-      {/*<Navbars/>*/}
     </div>
   );
 }

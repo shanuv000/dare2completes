@@ -97,7 +97,7 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-export default function MiniDrawer() {
+export default function MiniDrawer(props) {
   const { headerValue } = useContext(FormContext);
   const classes = useStyles();
   const theme = useTheme();
@@ -114,8 +114,6 @@ export default function MiniDrawer() {
     headerText = `Opportunity - Registration Form Steps | ${headerValue}`;
   } else if (location.pathname === "/form4") {
     headerText = `Opportunity - Payments |  ${headerValue}`;
-  } else {
-    return null;
   }
 
   const handleDrawerOpen = () => {
@@ -296,11 +294,8 @@ export default function MiniDrawer() {
       </Drawer>
       <main className={classes.content}>
         <div className={classes.toolbar} />
-        {/* <Route path="/drawer" component={Form} /> */}
-        <Route path="/form" exact component={Form} />
-        <Route path="/form2" exact component={Form2} />
-        <Route path="/form3" exact component={Form3} />
-        <Route path="/form4" exact component={Form4} />
+
+        {props.children}
       </main>
     </div>
   );
