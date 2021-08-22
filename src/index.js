@@ -3,11 +3,13 @@ import ReactDOM from "react-dom";
 import "./index.css";
 import { BrowserRouter } from "react-router-dom";
 import App from "./App";
-
+import { FireProvider } from "./components/FormContext";
 ReactDOM.render(
   <React.StrictMode>
     <BrowserRouter>
-      <App />
+      <FireProvider>
+        <App />
+      </FireProvider>
     </BrowserRouter>
   </React.StrictMode>,
   document.getElementById("root")

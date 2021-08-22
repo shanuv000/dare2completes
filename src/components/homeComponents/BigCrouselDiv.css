@@ -1,0 +1,34 @@
+.main__body__bigCrousel {
+  min-height: 500px;
+  margin-top: 50px;
+  padding: 30px;
+  border-radius: 8px;
+  background-color: #f8f8f8;
+}
+
+.scroll__list {
+  /* display: flex; */
+  align-items: center;
+  margin: 0 0 15px;
+  position: relative;
+  cursor: pointer;
+}
+
+.scroll__divs__crousel {
+  overflow-x: scroll;
+  height: 484px;
+}
+.big__crousel__img__div > img {
+  height: 484px;
+  width: 100%;
+  border-radius: 8px;
+}
+@media only screen and (max-width: 768px) {
+  .big__crousel__img__div > img {
+    height: 230px;
+    width: 100%;
+  }
+  .scroll__divs__crousel {
+    height: 320px;
+  }
+}

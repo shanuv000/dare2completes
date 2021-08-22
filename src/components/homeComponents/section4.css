@@ -1,0 +1,131 @@
+.All__containers__section4 {
+  margin: 0 -8px;
+}
+.image__div__section3 {
+  border-radius: 8px;
+  transition: 0.3s;
+  overflow: hidden;
+  border: 1px solid #e0e0e0;
+  position: relative;
+  min-height: 163px;
+  display: block;
+  cursor: pointer;
+}
+.image__div__section3::after,
+::before {
+  box-sizing: inherit;
+}
+.texts__top {
+  width: calc(100% - 32px);
+  padding-left: 15px;
+  /* margin-right: 5px; */
+}
+.sec4__head {
+  font-size: 17px;
+  font-weight: 500;
+}
+.sec4__title {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 15px;
+}
+.head__row:hover .button__explore {
+  opacity: 1;
+}
+
+.button__explore {
+  font-size: 14px;
+  align-items: center;
+  /* padding: 6px 20px; */
+  transition: 0.4s;
+  background: #fff;
+  color: #176ede;
+  border: 1px solid #aac2e2;
+  border-radius: 50px;
+  margin-right: 10px;
+  opacity: 0;
+  cursor: pointer;
+}
+.button__sm_explore {
+  font-size: 14px;
+  align-items: center;
+  /* padding: 6px 20px; */
+  transition: 0.4s;
+  background: #fff;
+  color: #176ede;
+  border: 1px solid #aac2e2;
+  border-radius: 50px;
+  margin-right: 10px;
+  opacity: 1;
+  cursor: pointer;
+}
+.sec4__Icons {
+  font-size: 14px;
+  color: red;
+}
+.small_screen {
+  /* padding: 20px; */
+  align-items: stretch;
+  /* display: flex; */
+  transition: 0.3s;
+
+  flex-direction: row;
+  flex-wrap: nowrap;
+
+  overflow-x: auto;
+  overflow-y: hidden;
+  /* overflow-x: hidden; */
+  min-height: 163px;
+}
+/* ///// */
+
+.row__row {
+  align-items: stretch;
+  /* display: flex; */
+  transition: 0.3s;
+
+  flex-direction: row;
+  flex-wrap: nowrap;
+
+  overflow-x: auto;
+  overflow-y: hidden;
+  min-height: 163px;
+}
+.card__card {
+  /*float: left;*/
+  max-width: 60%;
+
+  /* padding: 0.75rem; */
+  margin-bottom: 2rem;
+
+  border: 0;
+  flex-basis: 45.333%;
+  /* border: 1px solid #e0e0e0; */
+  flex-grow: 0;
+  flex-shrink: 0;
+  cursor: pointer;
+}
+
+.card__card > img {
+  margin-bottom: 0.75rem;
+  border-radius: 8px;
+}
+
+.card_text__text {
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 21px;
+}
+
+.card__card:hover {
+  /* border: 1px solid green; */
+  border-radius: 8px;
+}
+
+.small_screen::-webkit-scrollbar {
+  display: none;
+}
+.small_screen {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}

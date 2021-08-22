@@ -1,0 +1,55 @@
+/* .div__image {
+  margin-right: 20px;
+  width: 50%;
+  border-radius: 20px;
+  height: 280px;
+  object-fit: cover;
+} */
+/* .images__crousel {
+  width: 100%;
+  height: inherit;
+  border-radius: 17px;
+} */
+
+.div__image {
+  width: 50%;
+  border-radius: 25px;
+  /* padding: 0.75rem; */
+  /* margin-bottom: 2rem; */
+  margin-right: 10px;
+  /* border: ; */
+  /* height: 580px; */
+  /* background-color: red; */
+  /* flex-basis: 80%; */
+  /* border: 1px solid #e0e0e0; */
+  /* flex-grow: 0;
+  flex-shrink: 0;
+  cursor: pointer; */
+  object-fit: fill;
+  /* height: 163px; */
+  /* min-height: 280px; */
+  /* max-height: 380px; */
+}
+.images__crousel {
+  /* margin-bottom: 0.75rem; */
+  border-radius: 8px;
+  object-fit: contain;
+  width: 100%;
+  object-fit: fill;
+  max-height: 213px;
+  /* object-fit: contain; */
+  /* height: 200px; */
+  /* height: 300px; */
+}
+@media only screen and (max-width: 768px) {
+  .div__image {
+    width: 100%;
+    border-radius: 5px;
+    /* background: red; */
+    /* margin-right: 0px; */
+    /* min-height: 100px; */
+  }
+  .images__crousel {
+    max-height: 155px;
+  }
+}
