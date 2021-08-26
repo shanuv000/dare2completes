@@ -3,7 +3,7 @@ import React, { useState, useEffect, createContext } from "react";
 import Loading from "./homeComponents/LoaderSpinner";
 const ImagesArraysFun = () => {
   const imageArraying = [];
-  for (let i = 1020; i <= 1040; i++) {
+  for (let i = 1020; i <= 1030; i++) {
     imageArraying.push(`https://picsum.photos/${i}`);
   }
   return imageArraying;

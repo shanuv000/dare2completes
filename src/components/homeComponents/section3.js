@@ -61,11 +61,11 @@ const Section3 = () => {
         <div className="row ">
           {arraySection3.map((l) => (
             <div
-              className={`  col-4 col-md-2 col-lg section3__card mt-1 mt-sm-2 mr-md-1 mt-md-2 text-center  d-lg-flex justify-content-lg-between ${l.hidding}`}
+              className={`   col-4 col-md col-lg section3__card mt-1 mt-sm-2 mr-md-1 mt-md-2 text-center  d-lg-flex justify-content-lg-between ${l.hidding}`}
             >
               <div style={{ width: "100%" }}>
                 <span
-                  className=" section__icon d-flex flex-column align-self-center "
+                  className=" section__icon d-flex flex-column justify-content-center "
                   style={{ color: `${l.colors} ` }}
                 >
                   {l.icons}

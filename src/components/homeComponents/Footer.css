@@ -4,6 +4,7 @@
   padding-top: 50px;
   color: #bbb;
   position: relative;
+  /* margin-left: calc(100% - 240px); */
 }
 .column_1 {
   margin-bottom: 15px;

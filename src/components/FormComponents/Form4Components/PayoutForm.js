@@ -3,7 +3,7 @@ const PayoutForm = () => {
   return (
     <>
       <div className="row">
-        <div className="col-sm-12 col-md-6 col-lg-4">
+        <div className="col-12 col-md-6 col-lg-4">
           <div className="form-group">
             <label htmlFor="in1" className={styles.payout__font}>
               Account Holder Name <span className="text-danger">*</span>
@@ -16,7 +16,7 @@ const PayoutForm = () => {
             />
           </div>
         </div>
-        <div className="col-sm-12 col-md-6 col-lg-4">
+        <div className="col-12 col-md-6 col-lg-4">
           <div className="form-group">
             <label htmlFor="Phone" className={styles.payout__font}>
               Phone <span className="text-danger">*</span>
@@ -29,7 +29,7 @@ const PayoutForm = () => {
             />
           </div>
         </div>{" "}
-        <div className="col-sm-12 col-md-6 col-lg-4">
+        <div className="col-12 col-md-6 col-lg-4">
           <div className="form-group">
             <label htmlFor="Email" className={styles.payout__font}>
               Email <span className="text-danger">*</span>
@@ -42,7 +42,7 @@ const PayoutForm = () => {
             />
           </div>
         </div>{" "}
-        <div className="col-sm-12 col-md-6 col-lg-4">
+        <div className="col-12 col-md-6 col-lg-4">
           <div className="form-group">
             <label htmlFor="Bank Account *" className={styles.payout__font}>
               Bank Account <span className="text-danger">*</span>
@@ -55,7 +55,7 @@ const PayoutForm = () => {
             />
           </div>
         </div>{" "}
-        <div className="col-sm-12 col-md-6 col-lg-4">
+        <div className="col-12 col-md-6 col-lg-4">
           <div className="form-group">
             <label htmlFor="IFSC Code *" className={styles.payout__font}>
               IFSC Code <span className="text-danger">*</span>
@@ -68,7 +68,7 @@ const PayoutForm = () => {
             />
           </div>
         </div>{" "}
-        <div className="col-sm-12 col-md-6 col-lg-4">
+        <div className="col-12 col-md-6 col-lg-4">
           <div className="form-group">
             <label htmlFor="PAN Number" className={styles.payout__font}>
               PAN Number
@@ -81,7 +81,7 @@ const PayoutForm = () => {
             />
           </div>
         </div>{" "}
-        <div className="col-sm-12 col-md-6 col-lg-4">
+        <div className="col-12 col-md-6 col-lg-4">
           <div className="form-group">
             <label htmlFor="GSTIN" className={styles.payout__font}>
               GSTIN
@@ -94,7 +94,7 @@ const PayoutForm = () => {
             />
           </div>
         </div>{" "}
-        <div className="col-sm-12 col-md-6 col-lg-4">
+        <div className="col-12 col-md-6 col-lg-4">
           <div className="form-group">
             <label htmlFor="Address 1 " className={styles.payout__font}>
               Address 1 <span className="text-danger">*</span>
@@ -107,7 +107,7 @@ const PayoutForm = () => {
             />
           </div>
         </div>{" "}
-        <div className="col-sm-12 col-md-6 col-lg-4">
+        <div className="col-12 col-md-6 col-lg-4">
           <div className="form-group">
             <label htmlFor="Address 2" className={styles.payout__font}>
               Address 2 <span className="text-danger">*</span>
@@ -120,7 +120,7 @@ const PayoutForm = () => {
             />
           </div>
         </div>{" "}
-        <div className="col-sm-12 col-md-6 col-lg-4">
+        <div className="col-12 col-md-6 col-lg-4">
           <div className="form-group">
             <label htmlFor="City" className={styles.payout__font}>
               City <span className="text-danger">*</span>
@@ -133,7 +133,7 @@ const PayoutForm = () => {
             />
           </div>
         </div>{" "}
-        <div className="col-sm-12 col-md-6 col-lg-4">
+        <div className="col-12 col-md-6 col-lg-4">
           <div className="form-group">
             <label htmlFor="State" className={styles.payout__font}>
               State <span className="text-danger">*</span>
@@ -146,7 +146,7 @@ const PayoutForm = () => {
             />
           </div>
         </div>{" "}
-        <div className="col-sm-12 col-md-6 col-lg-4">
+        <div className="col-12 col-md-6 col-lg-4">
           <div className="form-group">
             <label htmlFor="Pincode" className={styles.payout__font}>
               Pincode <span className="text-danger">*</span>

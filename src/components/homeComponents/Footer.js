@@ -2,12 +2,17 @@ import "./Footer.css";
 const Footer = () => {
   return (
     <>
-      <div className="container-fluid footer__foot pb-4 d-none d-lg-block">
-        <div className=" d-flex justify-content-between">
-          <Column />
+      <div
+        className="container-fluid footer__foot pb-4 d-none d-lg-block"
+        // style={{ marginleft: `calc(100% - 240px)` }}
+      >
+        <div className="container">
+          <div className=" d-flex justify-content-between">
+            <Column />
+          </div>
+          <Column2 />
+          <Column3 />
         </div>
-        <Column2 />
-        <Column3 />
       </div>
       <Column4 />
       <ResponsiveColumn />

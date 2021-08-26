@@ -19,7 +19,7 @@ const Navbars = (props) => {
   return (
     <>
       <nav
-        className={`navbar navbar-${props.back_color} bg-${props.back_color} fixed-bottom  `}
+        className={`mt-md-3 navbar navbar-${props.back_color} bg-${props.back_color} fixed-bottom  `}
         style={{ zIndex: "2000" }}
       >
         <div className="container-fluid d-flex">
