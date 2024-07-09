@@ -1,12 +1,11 @@
-import { Navbar, Container, Nav } from "react-bootstrap";
-import { useLocation } from "react-router-dom";
-import "../style.css";
 import React from "react";
-import { useHistory } from "react-router-dom";
+import { useHistory, useLocation } from "react-router-dom"; // Import useHistory and useLocation directly
+import { Navbar } from "react-bootstrap";
+import "../style.css";
 
 const Navbars = (props) => {
-  const history = useHistory();
-  const location = useLocation();
+  const history = useHistory(); // Use useHistory directly
+  const location = useLocation(); // Use useLocation directly
 
   const handleHistory = () => {
     if (location.pathname === "/form") {
@@ -18,8 +17,8 @@ const Navbars = (props) => {
 
   return (
     <>
-      <nav
-        className={`mt-md-3 navbar navbar-${props.back_color} bg-${props.back_color} fixed-bottom  `}
+      <Navbar
+        className={`mt-md-3 navbar navbar-${props.back_color} bg-${props.back_color} fixed-bottom`}
         style={{ zIndex: "2000" }}
       >
         <div className="container-fluid d-flex">
@@ -40,8 +39,9 @@ const Navbars = (props) => {
             </button>
           </div>
         </div>
-      </nav>
+      </Navbar>
     </>
   );
 };
+
 export default Navbars;

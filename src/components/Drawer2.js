@@ -1,15 +1,11 @@
 import React, { useContext } from "react";
-import { useHistory } from "react-router-dom";
 import clsx from "clsx";
-import useMediaQuery from "@material-ui/core/useMediaQuery";
 import { makeStyles, useTheme } from "@material-ui/core/styles";
 import Drawer from "@material-ui/core/Drawer";
 import AppBar from "@material-ui/core/AppBar";
 import Toolbar from "@material-ui/core/Toolbar";
 import List from "@material-ui/core/List";
 import CssBaseline from "@material-ui/core/CssBaseline";
-import Typography from "@material-ui/core/Typography";
-import Divider from "@material-ui/core/Divider";
 import IconButton from "@material-ui/core/IconButton";
 import MenuIcon from "@material-ui/icons/Menu";
 import ChevronLeftIcon from "@material-ui/icons/ChevronLeft";
@@ -17,18 +13,11 @@ import ChevronRightIcon from "@material-ui/icons/ChevronRight";
 import ListItem from "@material-ui/core/ListItem";
 import ListItemIcon from "@material-ui/core/ListItemIcon";
 import ListItemText from "@material-ui/core/ListItemText";
-import InboxIcon from "@material-ui/icons/MoveToInbox";
-import MailIcon from "@material-ui/icons/Mail";
-import { Route } from "react-router-dom";
-import Form from "../pages/Form";
-import Navbars from "./NavbarBottom";
 import { Link } from "react-router-dom";
 import Classs from "./Drawer2.module.css";
-import Form2 from "../pages/Form2";
 import { useLocation } from "react-router-dom";
 import { FormContext } from "./FormContext";
-import Form3 from "../pages/Form3";
-import Form4 from "../pages/Form4";
+
 const drawerWidth = 240;
 
 const useStyles = makeStyles((theme) => ({
@@ -50,7 +39,6 @@ const useStyles = makeStyles((theme) => ({
       duration: theme.transitions.duration.enteringScreen,
     }),
   },
-
   menuButton: {
     marginRight: 36,
   },
@@ -85,7 +73,6 @@ const useStyles = makeStyles((theme) => ({
     alignItems: "center",
     justifyContent: "flex-end",
     padding: theme.spacing(0, 1),
-    // necessary for content to be below app bar
     ...theme.mixins.toolbar,
   },
   content: {
@@ -103,8 +90,7 @@ export default function MiniDrawer(props) {
   const theme = useTheme();
   const [open, setOpen] = React.useState(false);
   const location = useLocation();
-  const history = useHistory();
-  console.log(location.pathname);
+
   let headerText = "";
   if (location.pathname === "/form") {
     headerText = "Basic Details";
@@ -152,39 +138,22 @@ export default function MiniDrawer(props) {
             style={{ width: "100%" }}
           >
             <div
-              onClick={history.goBack}
-              className="	 d-sm-block d-md-block d-lg-none"
+              onClick={handleDrawerClose}
+              className="d-sm-block d-md-block d-lg-none"
             >
-              <h3 onClick={history.goBack}>
-                <i class="fas fa-chevron-left text-info"></i>
+              <h3 onClick={handleDrawerClose}>
+                <i className="fas fa-chevron-left text-info"></i>
               </h3>
             </div>{" "}
-            <div className="	 d-sm-block d-md-block d-lg-none">
-              <a
-                href="/"
-                style={{ fontSize: "18px", textDecoration: "none" }}
-                // className="nav-link "
-              >
+            <div className="d-sm-block d-md-block d-lg-none">
+              <a href="/" style={{ fontSize: "18px", textDecoration: "none" }}>
                 <h3>
-                  <i class="fas fa-home text-info"></i>
+                  <i className="fas fa-home text-info"></i>
                 </h3>
               </a>
             </div>
-            {/* <div class="d-sm-flex  d-lg-none">
-              <input type="search" id="form1" className="form-control-sm" />
-              <button type="button" class="btn ">
-                <i class="fas fa-search text-dark"></i>
-              </button>
-            </div> */}
             <div className="d-none d-lg-flex">
-              {/* <Link to="/">
-                <h4>Home</h4>
-              </Link> */}
-              <a
-                href="/"
-                style={{ fontSize: "18px", textDecoration: "none" }}
-                // className="nav-link "
-              >
+              <a href="/" style={{ fontSize: "18px", textDecoration: "none" }}>
                 Home
               </a>
             </div>
@@ -198,10 +167,10 @@ export default function MiniDrawer(props) {
             </div>
             <div className="d-flex">
               <h3 className="d-none d-lg-block">
-                <i class="far fa-bell text-primary " />
+                <i className="far fa-bell text-primary " />
               </h3>
               <h3 className="d-block">
-                <i class="fas fa-user-circle ml-2 text-dark" />
+                <i className="fas fa-user-circle ml-2 text-dark" />
               </h3>
             </div>
           </div>
@@ -236,65 +205,58 @@ export default function MiniDrawer(props) {
           {[
             {
               name: "Opportunity Visibility",
-              icons: <i class="far fa-eye"></i>,
+              icons: <i className="far fa-eye"></i>,
             },
-            { name: "Basic Details", icons: <i class="fab fa-wpforms"></i> },
+            {
+              name: "Basic Details",
+              icons: <i className="fab fa-wpforms"></i>,
+            },
             {
               name: "Registration & Eligibility",
-              icons: <i class="fas fa-sitemap"></i>,
+              icons: <i className="fas fa-sitemap"></i>,
             },
             {
               name: "Registration Form",
-              icons: <i class="fas fa-check"></i>,
+              icons: <i className="fas fa-check"></i>,
             },
             {
               name: "Payments",
-              icons: <i class="fas fa-money-check"></i>,
+              icons: <i className="fas fa-money-check"></i>,
             },
             {
               name: "Rounds",
-              icons: <i class="fas fa-route"></i>,
+              icons: <i className="fas fa-route"></i>,
             },
             {
               name: "About Opportunity",
-              icons: <i class="fas fa-info"></i>,
+              icons: <i className="fas fa-info"></i>,
             },
             {
               name: "Rewards & Recognition",
-              icons: <i class="fas fa-ribbon"></i>,
+              icons: <i className="fas fa-ribbon"></i>,
             },
             {
               name: "Additional Details",
-              icons: <i class="fas fa-folder-plus"></i>,
+              icons: <i className="fas fa-folder-plus"></i>,
             },
             {
               name: "Custom Branding",
-              icons: <i class="fas fa-ring"></i>,
+              icons: <i className="fas fa-ring"></i>,
             },
             {
               name: "Gallery",
-              icons: <i class="fas fa-image"></i>,
+              icons: <i className="fas fa-image"></i>,
             },
-          ].map((text, index) => {
-            return (
-              <ListItem
-                // button
-                key={text.name}
-                className={Classs.listItem}
-              >
-                <ListItemIcon className={Classs.lists}>
-                  {text.icons}
-                </ListItemIcon>
-                <ListItemText primary={text.name} />
-              </ListItem>
-              // <Divider />
-            );
-          })}
+          ].map((text, index) => (
+            <ListItem key={text.name} className={Classs.listItem}>
+              <ListItemIcon className={Classs.lists}>{text.icons}</ListItemIcon>
+              <ListItemText primary={text.name} />
+            </ListItem>
+          ))}
         </List>
       </Drawer>
       <main className={classes.content}>
         <div className={classes.toolbar} />
-
         {props.children}
       </main>
     </div>

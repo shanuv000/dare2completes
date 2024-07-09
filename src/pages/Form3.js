@@ -1,9 +1,10 @@
-import { useState } from "react";
-import { useHistory } from "react-router-dom";
+import React, { useState } from "react";
+import { useHistory } from "react-router-dom"; // Import useHistory directly from react-router-dom
 import styles from "./Form3.module.css";
+
 const Form3 = () => {
-  const history = useHistory();
-  const [formDiabled, setFormDiabled] = useState(true);
+  const history = useHistory(); // Use useHistory hook to manage navigation
+  const [formDisabled, setFormDisabled] = useState(true);
   const passOutArray = [2021, 2022, 2023, 2024, 2025, 2026, 2027];
   const CourseDurationArray = [
     "1 Year",
@@ -14,6 +15,7 @@ const Form3 = () => {
     "6 Year",
   ];
   let i = 0;
+
   return (
     <>
       <div
@@ -29,81 +31,81 @@ const Form3 = () => {
         <div className={`${styles.form__back}`}>
           <div className="row">
             <div className="col col-12">
-              <div class="form-group">
-                <label for="teamname1" className={styles.fonts}>
+              <div className="form-group">
+                <label htmlFor="teamname1" className={styles.fonts}>
                   Team Name <span>*</span>
                 </label>
                 <input
                   type="text"
-                  class="form-control"
+                  className="form-control"
                   id="teamname1"
                   aria-describedby="emailHelp"
                   value="Your Team Name"
-                  disabled={formDiabled}
+                  disabled={formDisabled}
                 />
               </div>
             </div>
             <div className="col-sm-12 col-md-6">
-              <div class="form-group">
-                <label for="teamemail1" className={`${styles.fonts}`}>
+              <div className="form-group">
+                <label htmlFor="teamemail1" className={`${styles.fonts}`}>
                   Player's Email
                   <span>*</span>
                 </label>
                 <input
                   type="text"
-                  class="form-control"
+                  className="form-control"
                   id="teamemail1"
                   aria-describedby="emailHelp"
                   value="Your Registered Email Id"
-                  disabled={formDiabled}
+                  disabled={formDisabled}
                 />
               </div>
             </div>{" "}
             <div className=" col-xs-12 col-md-6">
-              <div class="form-group">
-                <label for="phone" className={styles.fonts}>
+              <div className="form-group">
+                <label htmlFor="phone" className={styles.fonts}>
                   Player's Mobile No
                   <span>*</span>
                 </label>
                 <input
                   type="text"
-                  class="form-control"
+                  className="form-control"
                   id="phone"
                   aria-describedby="emailHelp"
                   value="Your Mobile Number"
-                  disabled={formDiabled}
+                  disabled={formDisabled}
                 />
               </div>
             </div>
             <div className="col-sm-12 col-md-6">
-              <div class="form-group">
-                <label for="playName" className={styles.fonts}>
+              <div className="form-group">
+                <label htmlFor="playName" className={styles.fonts}>
                   Player's Name
                   <span>*</span>
                 </label>
                 <input
                   type="text"
-                  class="form-control"
+                  className="form-control"
                   id="playName"
                   aria-describedby="emailHelp"
                   value="Your Name"
-                  disabled={formDiabled}
+                  disabled={formDisabled}
                 />
               </div>
             </div>{" "}
             <div className=" col-xs-12 col-md-6">
-              <div class="form-group">
-                <label for="organization" className={styles.fonts}>
+              <div className="form-group">
+                <label htmlFor="organization" className={styles.fonts}>
                   College/Organisation
                   <span>*</span>
                 </label>
                 <input
                   type="text"
-                  class="form-control"
+                  className="form-control"
                   id="organization"
                   aria-describedby="emailHelp"
                   value="Your College/Organisation"
-                  disabled={formDiabled}
+                  disabled={formDisabled}
                 />
               </div>
             </div>
@@ -113,9 +115,9 @@ const Form3 = () => {
                 className={`d-md-flex align-items-center   form-control p-3  ${styles.form__backColor}`}
               >
                 <div className={"mr-3"}>Gender</div>
-                <div class="form-check   disabled ">
+                <div className="form-check   disabled ">
                   <input
-                    class="form-check-input"
+                    className="form-check-input"
                     type="radio"
                     name="exampleRadios"
                     id="exampleRadios3"
@@ -123,13 +125,16 @@ const Form3 = () => {
                     checked={true}
                     disabled
                   />
-                  <label class="form-check-label mr-3" for="exampleRadios3">
+                  <label
+                    className="form-check-label mr-3"
+                    htmlFor="exampleRadios3"
+                  >
                     Male
                   </label>
                 </div>
-                <div class="form-check   disabled ">
+                <div className="form-check   disabled ">
                   <input
-                    class="form-check-input"
+                    className="form-check-input"
                     type="radio"
                     name="exampleRadios"
                     id="exampleRadios3"
@@ -137,13 +142,16 @@ const Form3 = () => {
                     // checked={true}
                     disabled
                   />
-                  <label class="form-check-label mr-3" for="exampleRadios3">
+                  <label
+                    className="form-check-label mr-3"
+                    htmlFor="exampleRadios3"
+                  >
                     Female
                   </label>
                 </div>
-                <div class="form-check   disabled">
+                <div className="form-check   disabled">
                   <input
-                    class="form-check-input"
+                    className="form-check-input"
                     type="radio"
                     name="exampleRadios"
                     id="exampleRadios3"
@@ -151,7 +159,7 @@ const Form3 = () => {
                     // checked={true}
                     disabled
                   />
-                  <label class="form-check-label" for="exampleRadios3">
+                  <label className="form-check-label" htmlFor="exampleRadios3">
                     Do not Wish to Disclose
                   </label>
                 </div>
@@ -162,9 +170,9 @@ const Form3 = () => {
                 className={`d-md-flex align-items-center   form-control p-3  ${styles.form__backColor}`}
               >
                 <div className={"mr-3"}>Type</div>
-                <div class="form-check   disabled ">
+                <div className="form-check   disabled ">
                   <input
-                    class="form-check-input"
+                    className="form-check-input"
                     type="radio"
                     name="exampleRadios"
                     id="exampleRadios3"
@@ -172,13 +180,16 @@ const Form3 = () => {
                     checked={true}
                     disabled
                   />
-                  <label class="form-check-label mr-3" for="exampleRadios3">
+                  <label
+                    className="form-check-label mr-3"
+                    htmlFor="exampleRadios3"
+                  >
                     College Student
                   </label>
                 </div>
-                <div class="form-check   disabled ">
+                <div className="form-check   disabled ">
                   <input
-                    class="form-check-input"
+                    className="form-check-input"
                     type="radio"
                     name="exampleRadios"
                     id="exampleRadios3"
@@ -186,13 +197,16 @@ const Form3 = () => {
                     // checked={true}
                     disabled
                   />
-                  <label class="form-check-label mr-3" for="exampleRadios3">
+                  <label
+                    className="form-check-label mr-3"
+                    htmlFor="exampleRadios3"
+                  >
                     Corporate
                   </label>
                 </div>
-                <div class="form-check   disabled mr-3">
+                <div className="form-check   disabled mr-3">
                   <input
-                    class="form-check-input"
+                    className="form-check-input"
                     type="radio"
                     name="exampleRadios"
                     id="exampleRadios3"
@@ -200,7 +214,7 @@ const Form3 = () => {
                     // checked={true}
                     disabled
                   />
-                  <label class="form-check-label" for="exampleRadios3">
+                  <label className="form-check-label" htmlFor="exampleRadios3">
                     Others
                   </label>
                 </div>
@@ -211,9 +225,9 @@ const Form3 = () => {
                 className={`d-md-flex align-items-center   form-control p-3  ${styles.form__backColor}`}
               >
                 <div className={"mr-3"}>Domain</div>
-                <div class="form-check   disabled mr-3">
+                <div className="form-check   disabled mr-3">
                   <input
-                    class="form-check-input"
+                    className="form-check-input"
                     type="radio"
                     name="exampleRadios"
                     id="exampleRadios3"
@@ -221,13 +235,13 @@ const Form3 = () => {
                     //   checked={true}
                     disabled
                   />
-                  <label class="form-check-label " for="exampleRadios3">
+                  <label className="form-check-label " htmlFor="exampleRadios3">
                     Management
                   </label>
                 </div>
-                <div class="form-check   disabled mr-3">
+                <div className="form-check   disabled mr-3">
                   <input
-                    class="form-check-input"
+                    className="form-check-input"
                     type="radio"
                     name="exampleRadios"
                     id="exampleRadios3"
@@ -235,13 +249,13 @@ const Form3 = () => {
                     // checked={true}
                     disabled
                   />
-                  <label class="form-check-label " for="exampleRadios3">
+                  <label className="form-check-label " htmlFor="exampleRadios3">
                     Engineering
                   </label>
                 </div>
-                <div class="form-check   disabled mr-3">
+                <div className="form-check   disabled mr-3">
                   <input
-                    class="form-check-input"
+                    className="form-check-input"
                     type="radio"
                     name="exampleRadios"
                     id="exampleRadios3"
@@ -249,13 +263,13 @@ const Form3 = () => {
                     checked={true}
                     disabled
                   />
-                  <label class="form-check-label" for="exampleRadios3">
+                  <label className="form-check-label" htmlFor="exampleRadios3">
                     Art & Science
                   </label>
                 </div>
-                <div class="form-check   disabled mr-3">
+                <div className="form-check   disabled mr-3">
                   <input
-                    class="form-check-input"
+                    className="form-check-input"
                     type="radio"
                     name="exampleRadios"
                     id="exampleRadios3"
@@ -263,7 +277,7 @@ const Form3 = () => {
                     // checked={true}
                     disabled
                   />
-                  <label class="form-check-label" for="exampleRadios3">
+                  <label className="form-check-label" htmlFor="exampleRadios3">
                     Others
                   </label>
                 </div>
@@ -274,9 +288,9 @@ const Form3 = () => {
                 className={`d-md-flex align-items-center   form-control p-3  ${styles.form__backColor}`}
               >
                 <div className={"mr-3"}>Courses</div>
-                <div class="form-check   disabled mr-3 ">
+                <div className="form-check   disabled mr-3 ">
                   <input
-                    class="form-check-input"
+                    className="form-check-input"
                     type="radio"
                     name="exampleRadios"
                     id="exampleRadios3"
@@ -284,13 +298,13 @@ const Form3 = () => {
                     checked={true}
                     disabled
                   />
-                  <label class="form-check-label " for="exampleRadios3">
+                  <label className="form-check-label " htmlFor="exampleRadios3">
                     Full Time 2-Year Mba
                   </label>
                 </div>
-                <div class="form-check   disabled mr-3">
+                <div className="form-check   disabled mr-3">
                   <input
-                    class="form-check-input"
+                    className="form-check-input"
                     type="radio"
                     name="exampleRadios"
                     id="exampleRadios3"
@@ -298,13 +312,13 @@ const Form3 = () => {
                     // checked={true}
                     disabled
                   />
-                  <label class="form-check-label" for="exampleRadios3">
+                  <label className="form-check-label" htmlFor="exampleRadios3">
                     Full Time 1-Year Mba
                   </label>
                 </div>
-                <div class="form-check   disabled mr-3">
+                <div className="form-check   disabled mr-3">
                   <input
-                    class="form-check-input"
+                    className="form-check-input"
                     type="radio"
                     name="exampleRadios"
                     id="exampleRadios3"
@@ -312,13 +326,13 @@ const Form3 = () => {
                     //   checked={true}
                     disabled
                   />
-                  <label class="form-check-label" for="exampleRadios3">
+                  <label className="form-check-label" htmlFor="exampleRadios3">
                     BBA (Graduation)
                   </label>
                 </div>
-                <div class="form-check   disabled mr-3">
+                <div className="form-check   disabled mr-3">
                   <input
-                    class="form-check-input"
+                    className="form-check-input"
                     type="radio"
                     name="exampleRadios"
                     id="exampleRadios3"
@@ -326,7 +340,7 @@ const Form3 = () => {
                     // checked={true}
                     disabled
                   />
-                  <label class="form-check-label" for="exampleRadios3">
+                  <label className="form-check-label" htmlFor="exampleRadios3">
                     Others
                   </label>
                 </div>
@@ -337,7 +351,7 @@ const Form3 = () => {
                 className={`d-md-flex align-items-center   form-control p-3  ${styles.form__backColor}`}
               >
                 <div className={"mr-3"}>Course Specialization</div>
-                <select class="custom-select" disabled={true}>
+                <select className="custom-select" disabled={true}>
                   <option selected>Select</option>
                   <option value="1">One</option>
                   <option value="2">Two</option>
@@ -352,9 +366,9 @@ const Form3 = () => {
                 <div className={"mr-3"}>Passout Year</div>
                 {passOutArray.map((e) => {
                   return (
-                    <div class="form-check   disabled mr-3 ">
+                    <div className="form-check   disabled mr-3 ">
                       <input
-                        class="form-check-input"
+                        className="form-check-input"
                         type="radio"
                         name="exampleRadios"
                         id="exampleRadios3"
@@ -362,7 +376,10 @@ const Form3 = () => {
                         checked={false}
                         disabled
                       />
-                      <label class="form-check-label " for="exampleRadios3">
+                      <label
+                        className="form-check-label "
+                        htmlFor="exampleRadios3"
+                      >
                         {e}
                       </label>
                     </div>
@@ -378,9 +395,9 @@ const Form3 = () => {
                 {CourseDurationArray.map((e) => {
                   i = i + 1;
                   return (
-                    <div class="form-check   disabled mr-3 ">
+                    <div className="form-check   disabled mr-3 ">
                       <input
-                        class="form-check-input"
+                        className="form-check-input"
                         type="radio"
                         name="exampleRadios"
                         id="exampleRadios3"
@@ -390,7 +407,10 @@ const Form3 = () => {
                         }
                         disabled
                       />
-                      <label class="form-check-label " for="exampleRadios3">
+                      <label
+                        className="form-check-label "
+                        htmlFor="exampleRadios3"
+                      >
                         {e}
                       </label>
                     </div>
@@ -403,7 +423,7 @@ const Form3 = () => {
                 className={`d-lg-flex align-items-center   form-control p-3  ${styles.form__backColor}`}
               >
                 <div className={"mr-3"}>Country</div>
-                <select class="custom-select" disabled={true}>
+                <select className="custom-select" disabled={true}>
                   <option selected>India</option>
                 </select>
               </div>
@@ -436,4 +456,5 @@ const Form3 = () => {
     </>
   );
 };
+
 export default Form3;
